@@ -1,0 +1,9 @@
+huayra-cam usr/share/huayra-cam
+index.html usr/share/huayra-cam
+package.json usr/share/huayra-cam
+README.md usr/share/huayra-cam
+style.css usr/share/huayra-cam
+iconos/* usr/share/huayra-cam
+
+debian/huayra-cam.desktop /usr/share/applications
+debian/huayra-cam.svg /usr/share/icons/hicolor/scalable/apps

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45.155556mm"
+   height="45.155556mm"
+   viewBox="0 0 160 160"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="huayra-cam.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1270361"
+     inkscape:cx="0.9819921"
+     inkscape:cy="124.78894"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3379"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1440"
+     inkscape:window-height="824"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-28.571428,-20.93362)">
+    <g
+       id="g3379">
+      <path
+         sodipodi:nodetypes="ccccccccsssssssc"
+         inkscape:connector-curvature="0"
+         id="rect3357"
+         d="m 53.639625,62.245425 0,-10.716041 24.732173,0 10.488115,0 8.488115,10.716041 22.488112,0 10.48812,0 10.48811,0 10.48812,0 c 14.35119,0 25.90468,10.317303 25.90468,23.132966 l 0,42.396549 c 0,12.81566 -11.55349,23.13296 -25.90468,23.13296 l -83.904923,0 c -14.351192,0 -25.904679,-10.3173 -25.904679,-23.13296 l 0,-42.396549 c 0,-12.815663 0.760664,-20.792 12.148737,-23.132966 z"
+         style="opacity:0.82060002;fill:#808080;fill-opacity:0.97101452;stroke:none;stroke-width:2.4000001;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="32.973881"
+         cy="105.62627"
+         cx="136.02832"
+         id="path3359-3"
+         style="opacity:0.82060002;fill:#f2f2f2;fill-opacity:0.97101452;stroke:none;stroke-width:2.4000001;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         r="28.304394"
+         cy="105.62627"
+         cx="136.02832"
+         id="path3359"
+         style="opacity:0.82060002;fill:#808080;fill-opacity:0.97101452;stroke:none;stroke-width:2.4000001;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="4.4360132"
+         y="73.406807"
+         x="58.981762"
+         height="8.8720264"
+         width="33.620312"
+         id="rect3362"
+         style="opacity:0.82060002;fill:#808080;fill-opacity:0.97101452;stroke:none;stroke-width:2.4000001;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>

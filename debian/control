@@ -1,0 +1,16 @@
+Source: huayra-cam
+Section: Accesories
+Priority: extra
+Maintainer: Diego Accorinti <diegoacco@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), 
+Standards-Version: 3.9.6
+Homepage: https://github.com/HuayraLinux/huayra-cam
+Vcs-Browser: https://github.com/HuayraLinux/huayra-cam
+Vcs-Git: https://github.com/HuayraLinux/huayra-cam.git
+
+Package: huayra-cam
+Architecture: all
+Depends: ${misc:Depends}, nodejs
+Description: Una aplicación para tomar fotos con
+ tu netbook como si fuera un celular. Las imágenes
+se guardan automáticamente en la carpeta /home/imágenes
