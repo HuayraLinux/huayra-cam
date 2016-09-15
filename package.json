@@ -1,16 +1,13 @@
 {
-  "name": "camera",
+  "name": "huayra-cam",
   "main": "index.html",
   "window": {
-    "title": "Camera",
+    "title": "Huayra-CAM",
     "icon": "images/icon.png",
-    "toolbar": true,
-    "frame": false,
-    "width": 640,
-    "height": 480,
-    "min_width": 480,
-    "min_height": 640,
-    "resizable": true,
-    "transparent": true
+     "toolbar": false,
+    "resizable": false,
+    "transparent": true,
+	"fullscreen": true,
+	"kiosk": true
   }
 }

@@ -1,75 +1,69 @@
-/* 
-* @Author: sergiovilar
-* @Date:   2014-04-22 21:30:03
-* @Last Modified by:   sergiovilar
-* @Last Modified time: 2014-04-22 21:48:43
-*/
 
-body, html{
+body, html{ margin:0; padding:0; width:640px; height: 480px;
+			overflow: hidden; }
 
-	margin:0; 
-	padding:0; 
-	width:640px; 
-	height: 
-	480px; 
-	overflow: hidden;
-
-}
-
-.toolbar{
-
-	background:#525453; 
-	position: absolute;
-	top:0; 
-	width:640px; 
-	opacity: 0.75; 
-	height: 20px; 
-	-webkit-user-select: none; 
-	-webkit-app-region: drag;
-	z-index:200;
-
-}
-
-.button-container{
+.btn-salir{
 
 	position: absolute; 
-	top:0; 
-	width:640px; 
-	padding:2px 3px;
+	right:0; 
 	z-index:200;
-
-}
-
-.btn-os{
-
-    border-radius: 30px;
-    border: 0;
-    color: transparent;
+	opacity: 0.4;
+    filter: alpha(opacity=40);
+    border: 0px;
+	margin: 20px;
     display: inline-block;
-    font-size: 10px;
-    height: 12px;
-    padding: 0;
-    text-align: center;
-    width: 12px;
+    width: 90px;
+	height: 90px; 
+    padding: 20px;
     cursor: pointer;
     outline: none;
     -webkit-app-region: no-drag;
-
+    background-image: url("iconos/salir.png");
 }
 
-.btn-os.close:hover{
+.btn-salir:hover{ opacity: 0.7; filter: alpha(opacity=70); }
 
-    background:#dd3628;
+.btn-foto{
 
+	position: absolute; 
+	right:30px;
+	top: 45%; 
+	z-index:200;
+	opacity: 0.4;
+    filter: alpha(opacity=40);
+    border: 0px;
+	margin: 20px;
+    display: inline-block;
+    width: 90px;
+	height: 90px; 
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    -webkit-app-region: no-drag;
+    background-image: url("iconos/foto.png");
 }
 
-.btn-os.hide:hover{
+.btn-foto:hover{ opacity: 0.7; filter: alpha(opacity=70); }
 
-    background:#ddc548;
 
-}
 
 video {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+video#huayracam { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }

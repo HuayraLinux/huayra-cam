@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 
-    <div class="toolbar"></div>
-    <div class="button-container">
-        <button class="btn-os close"></button>
-        <button class="btn-os hide"></button>
-    </div>
+<!--
+  ########  sonido de camara cuando dispara
+  ########   flash en vez del alert
+-->
 
-    <video width="640" height="480" autoplay></video>
-    <canvas width="640" height="480" style="display:none;"></canvas>
+
+    <div class="btn-salir"></div>
+    <div class="btn-foto"></div>
+
+    <video id='huayracam' width="1280" height="720" autoplay></video>
+    <canvas width="1280" height="720" style="display:none;"></canvas>
 
     <script>
 
-        var path = '/Users/sergiovilar/Desktop',
+        var path = '/home/alumno/Imágenes/',
             gui = require('nw.gui'),
             win = gui.Window.get();
 
-        document.querySelector('.btn-os.hide').addEventListener('click', function(){
-            win.minimize();
-        });
 
-        document.querySelector('.btn-os.close').addEventListener('click', function(){
+        document.querySelector('.btn-salir').addEventListener('click', function(){
             win.close();
         });
+        document.querySelector('.btn-foto').addEventListener('click', function(){
+            snapshot();
+        });
+        
 
-        function gravaImagem(img){
+        function sacafoto(img){
 
             var fs = require('fs'),
                 sys = require('sys');
@@ -38,12 +41,12 @@
             var buf = new Buffer(data, 'base64');
             fs.writeFile(path + '/' +new Date().getTime()+ '.png', buf);
 
-            alert('Imagem salva!')
+            alert('Foto guardada')
 
         }
 
         var errorCallback = function(e) {
-            console.log('Reeeejected!', e);
+            console.log('Error!', e);
         };
 
         var video = document.querySelector('video');
@@ -53,8 +56,8 @@
 
         function snapshot() {
             if (localMediaStream) {
-              ctx.drawImage(video, 0, 0);          
-              gravaImagem(canvas.toDataURL('image/png'));
+              ctx.drawImage(video, 0, 0, 1280, 720);          
+              sacafoto(canvas.toDataURL('image/png'));
             }
         }
 
