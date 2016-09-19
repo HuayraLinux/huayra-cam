@@ -1,6 +1,7 @@
 {
   "name": "huayra-cam",
   "main": "index.html",
+  "chromium-args": "--disable-setuid-sandbox",
   "window": {
     "title": "Huayra-CAM",
     "icon": "images/icon.png",

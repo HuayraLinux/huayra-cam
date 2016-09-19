@@ -2,6 +2,16 @@
 body, html{ margin:0; padding:0; width:640px; height: 480px;
 			overflow: hidden; }
 
+#divflash { 
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: #fff;
+   width: 100%;
+   height: 100% }
+
 .btn-salir{
 
 	position: absolute; 
