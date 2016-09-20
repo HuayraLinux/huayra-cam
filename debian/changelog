@@ -1,3 +1,9 @@
+huayra-cam (0.0.42-1) unstable; urgency=medium
+
+  * fix-debian
+
+ -- Diego Accorinti <diegoacco@gmail.com>  Tue, 20 Sep 2016 16:13:02 -0300
+
 huayra-cam (0.0.41-1) unstable; urgency=medium
 
   * ajustes
