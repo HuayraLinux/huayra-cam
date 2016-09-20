@@ -66,6 +66,17 @@
             localMediaStream = stream;
         }, errorCallback);
 
+		// Tomar foto cuando se presiona espacio
+		$(document).ready(function(){
+		 
+			  $(document).keypress(function(e) {
+				    //32 es el codigo de espacio
+				    if(e.which == 32) {
+				        snapshot();
+				    }
+			  });         
+		});
+
       </script>
 
   </body>

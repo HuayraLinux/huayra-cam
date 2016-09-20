@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # definir aqui los valores de la aplicacion
-APP_PATH="/home/alumno/paquetes/src/huayra-cam/";
+APP_PATH="/usr/share/huayra-cam/";
 PID_FILE="/tmp/huayra-CAM.pid";
 WM_CLASS="Huayra-CAM.nw";
 
@@ -10,12 +10,12 @@ WM_CLASS="Huayra-CAM.nw";
 GRANDPARENT_PID=`which grandparent-pid`;
 SET_WMCLASS=`which set-wmclass`;
 
-nw ${APP_PATH} &
-sleep 5; # le damos un segundo a que escriba el pid
+nw ${APP_PATH} 
+#sleep 5; # le damos un segundo a que escriba el pid
 
 # ahora si, obtenemos el pid
-CAM_PID=`cat ${PID_FILE}`;
+#CAM_PID=`cat ${PID_FILE}`;
 # obtenemos el proceso parent, del proc parent.
-NW_PID=`${GRANDPARENT_PID} -p ${CAM_PID}`;
+#NW_PID=`${GRANDPARENT_PID} -p ${CAM_PID}`;
 # seteamos al hint WM_CLASS
-${SET_WMCLASS} -p ${NW_PID} -t ${WM_CLASS} &
+#${SET_WMCLASS} -p ${NW_PID} -t ${WM_CLASS} &
