@@ -66,15 +66,19 @@
             localMediaStream = stream;
         }, errorCallback);
 
-		// Tomar foto cuando se presiona espacio
+		// capturar teclado
 		$(document).ready(function(){
 		 
 			  $(document).keypress(function(e) {
 				    //32 es el codigo de espacio
 				    if(e.which == 32) {
-				        snapshot();
-				    }
+				        snapshot();}
 			  });         
+			  $(document).keyup(function(e) {
+				    //27 es el codigo de ESC
+				    if(e.keyCode == 27) {
+				         win.close();}
+			  });  
 		});
 
       </script>
