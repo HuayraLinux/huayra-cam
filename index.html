@@ -15,8 +15,17 @@
 
     <script>
         $("#divflash").hide(); 
+		
+		// Capturo el directorio IMAGENES del usuario
+		var exec = require('child_process').exec;
+		var cmd = 'xdg-user-dir PICTURES';
 
-        var path = '/home/alumno/Imágenes/',
+		exec(cmd, function(error, stdout, stderr) {
+		  imagenes = stdout;
+		});
+
+
+        var path = imagenes,
             gui = require('nw.gui'),
             win = gui.Window.get();
 
