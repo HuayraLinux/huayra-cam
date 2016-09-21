@@ -10,5 +10,5 @@ Vcs-Git: https://github.com/HuayraLinux/huayra-cam.git
 
 Package: huayra-cam
 Architecture: all
-Depends: ${misc:Depends}, nodejs,
+Depends: ${misc:Depends}, node-webkit,
 Description: Una aplicacion para tomar fotos con tu netbook como si fuera un celular. Las imagenes se guardan automaticamente.
