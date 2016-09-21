@@ -1,3 +1,9 @@
+huayra-cam (0.0.45) unstable; urgency=medium
+
+  * El paquete pasa a ser nativo
+
+ -- Ignacio Losiggio <iglosiggio@gmail.com>  Wed, 21 Sep 2016 11:06:41 -0300
+
 huayra-cam (0.0.44-1) unstable; urgency=medium
 
   * fix
