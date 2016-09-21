@@ -1,4 +1,4 @@
-huayra-cam usr/bin/huayra-cam
+huayra-cam usr/bin
 index.html usr/share/huayra-cam
 package.json usr/share/huayra-cam
 README.md usr/share/huayra-cam
