@@ -1,3 +1,9 @@
+huayra-cam (0.0.47) unstable; urgency=medium
+
+  * fix ruta
+
+ -- Diego Accorinti <diegoacco@gmail.com>  Thu, 22 Sep 2016 11:04:51 -0300
+
 huayra-cam (0.0.46) unstable; urgency=medium
 
   * fixes ruta a IMAGENES y dependencia del paquete 

@@ -20,11 +20,11 @@
 		var exec = require('child_process').execSync;
 		var cmd = 'xdg-user-dir PICTURES';
 
-	var path = exec(cmd).toString(),
+
+	var path = exec(cmd).toString().slice(0,-1),
             gui = require('nw.gui'),
             win = gui.Window.get();
-
-
+	
         document.querySelector('.btn-salir').addEventListener('click', function(){
             win.close();
         });
@@ -43,7 +43,7 @@
             fs.writeFile(path + '/' +new Date().getTime()+ '.png', buf);
 
             $("#divflash").show(); 
-            $("#divflash").fadeOut(500); 
+            $("#divflash").fadeOut(300); 
 
         }
 
