@@ -5,6 +5,7 @@ README.md usr/share/huayra-cam
 style.css usr/share/huayra-cam
 iconos/* usr/share/huayra-cam/iconos
 jquery1.3.js usr/share/huayra-cam
+huayra-cam.1 usr/share/man/es/man1
 
 debian/huayra-cam.desktop /usr/share/applications
 debian/huayra-cam.svg /usr/share/icons/hicolor/scalable/apps
