@@ -10,8 +10,8 @@
     <div class="btn-salir"></div>
     <div class="btn-foto"></div>
 
-    <video id='huayracam' width="1200" height="720" autoplay></video>
-    <canvas width="1200" height="720" style="display:none;"></canvas>
+    <video id='huayracam' width="1360" height="768" autoplay></video>
+    <canvas width="1360" height="768" style="display:none;"></canvas>
 
     <script>
         $("#divflash").hide(); 
@@ -58,7 +58,7 @@
 
         function snapshot() {
             if (localMediaStream) {
-              ctx.drawImage(video, 0, 0, 1280, 720);          
+              ctx.drawImage(video, 0, 0, 1360, 768);          
               sacafoto(canvas.toDataURL('image/png'));
             }
         }
