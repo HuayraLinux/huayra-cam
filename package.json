@@ -6,9 +6,9 @@
     "title": "Huayra-CAM",
     "icon": "images/icon.png",
      "toolbar": false,
-    "resizable": false,
+    "resizable": true,
     "transparent": true,
-	"fullscreen": true,
+    "fullscreen": true,
 	"kiosk": true
   }
 }
