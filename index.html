@@ -10,10 +10,20 @@
     <div class="btn-salir"></div>
     <div class="btn-foto"></div>
 
-    <video id='huayracam' width="1360" height="768" autoplay></video>
-    <canvas width="1360" height="768" style="display:none;"></canvas>
+    <video id="huayracam" width="500" height="500" autoplay></video>
+    <canvas id="canvas" width="500" height="500" style="display:none;"></canvas>
 
     <script>
+
+		// modifico la resolución tomando la real de la pantalla
+		var pantalla = document.querySelector('#huayracam');
+		pantalla.setAttribute("width", screen.width);
+		pantalla.setAttribute("height", screen.height + 20);
+
+		var elcanvas = document.querySelector('#canvas');
+		elcanvas.setAttribute("width", screen.width);
+		elcanvas.setAttribute("height", screen.height +40);
+
         $("#divflash").hide(); 
 		
 		// Capturo el directorio IMAGENES del usuario
@@ -58,7 +68,7 @@
 
         function snapshot() {
             if (localMediaStream) {
-              ctx.drawImage(video, 0, 0, 1360, 768);          
+              ctx.drawImage(video, 0, 0, screen.width, screen.height + 40);          
               sacafoto(canvas.toDataURL('image/png'));
             }
         }
