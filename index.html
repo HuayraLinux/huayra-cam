@@ -7,6 +7,7 @@
 <body>
 
     <div id="divflash"></div>
+    <div id="divNoCam"><span class='noCam'>No se detect&oacute; ninguna c&aacute;mara.<br />Presione ESC para salir.</span></div>
     <div class="btn-salir"></div>
     <div class="btn-foto"></div>
 
@@ -14,7 +15,8 @@
     <canvas width="1024" height="768" style="display:none;"></canvas>
 
     <script>
-        $("#divflash").hide(); 
+        $("#divflash").hide();
+        $("#divNoCam").hide();
 		
 		// Capturo el directorio IMAGENES del usuario
 		var exec = require('child_process').execSync;
@@ -48,7 +50,7 @@
         }
 
         var errorCallback = function(e) {
-            console.log('Error!', e);
+            $("#divNoCam").show(); 
         };
 
         var video = document.querySelector('video');
