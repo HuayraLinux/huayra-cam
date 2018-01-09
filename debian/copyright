@@ -4,11 +4,8 @@ Source: https://github.com/HuayraLinux/huayra-cam
 
 Files: *
 Copyright: 2016 Diego Accorinti <diegoacco@gmail.com>
+           2014 Sergio Vilar  https://github.com/sergiovilar
 License: GPL-3.0+
-Copyright: 2014 Sergio Vilar  https://github.com/sergiovilar
-License: GPL-3.0+
-
-
 
 Files: debian/*
 Copyright: 2016 Diego Accorinti <diegoacco@gmail.com>
