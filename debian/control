@@ -2,7 +2,7 @@ Source: huayra-cam
 Section: graphics
 Priority: extra
 Maintainer: Diego Accorinti <diegoacco@gmail.com>
-Build-Depends: debhelper (>= 9.0.0), libjs-jquery
+Build-Depends: debhelper (>= 9.0.0)
 Standards-Version: 3.9.6
 Homepage: https://github.com/HuayraLinux/huayra-cam
 Vcs-Browser: https://github.com/HuayraLinux/huayra-cam
@@ -10,7 +10,7 @@ Vcs-Git: https://github.com/HuayraLinux/huayra-cam.git
 
 Package: huayra-cam
 Architecture: all
-Depends: ${misc:Depends}, node-webkit, xdg-user-dirs, libjs-jquery
+Depends: ${misc:Depends}, electron, xdg-user-dirs, libjs-jquery
 Description: Una aplicación simple para tomar fotos.
  Huayra-CAM te permite sacar fotos como lo hacés
  con tu celular. Las imágenes se guardan

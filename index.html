@@ -1,93 +1,72 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
-</head>
-<body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+	</head>
+	<body>
+		<div id="divflash"></div>
+		<div id="divNoCam">
+			<span class='noCam'>No se detectó ninguna cámara.<br />
+			Presione ESC para salir.</span>
+		</div>
+		<div class="btn-salir"></div>
+		<div class="btn-foto"></div>
 
-    <div id="divflash"></div>
-    <div id="divNoCam"><span class='noCam'>No se detect&oacute; ninguna c&aacute;mara.<br />Presione ESC para salir.</span></div>
-    <div class="btn-salir"></div>
-    <div class="btn-foto"></div>
+		<video id='huayracam' width="1360" height="768" autoplay></video>
+		<canvas width="1024" height="768" style="display:none;"></canvas>
+		<script type="text/javascript">
+			/* por cómo es electron jquery se carga como módulo */
+			const $ = require('/usr/share/javascript/jquery/jquery.min.js');
 
-    <video id='huayracam' width="1360" height="768" autoplay></video>
-    <canvas width="1024" height="768" style="display:none;"></canvas>
+			// Capturo el directorio IMAGENES del usuario
+			const exec = require('child_process').execSync;
+			const cmd  = 'xdg-user-dir PICTURES';
+			const path = exec(cmd).toString().slice(0,-1);
+			const win  = require('electron').remote.getCurrentWindow();
 
-    <script>
-        $("#divflash").hide();
-        $("#divNoCam").hide();
-		
-		// Capturo el directorio IMAGENES del usuario
-		var exec = require('child_process').execSync;
-		var cmd = 'xdg-user-dir PICTURES';
+			function sacafoto(img) {
+				const fs  = require('fs');
 
+				var data = img.replace(/^data:image\/\w+;base64,/, '');
+				var buf = new Buffer(data, 'base64');
+				fs.writeFile(path + '/' +new Date().getTime()+ '.png', buf);
 
-	var path = exec(cmd).toString().slice(0,-1),
-            gui = require('nw.gui'),
-            win = gui.Window.get();
-	
-        document.querySelector('.btn-salir').addEventListener('click', function(){
-            win.close();
-        });
-        document.querySelector('.btn-foto').addEventListener('click', function(){
-            snapshot();
-        });
-        
-	
-        function sacafoto(img){
+				$('#divflash').show();
+				$('#divflash').fadeOut(300);
+			}
 
-            var fs = require('fs'),
-                sys = require('util');
-            
-            var data = img.replace(/^data:image\/\w+;base64,/, "");
-            var buf = new Buffer(data, 'base64');
-            fs.writeFile(path + '/' +new Date().getTime()+ '.png', buf);
+			let localMediaStream = null;
 
-            $("#divflash").show(); 
-            $("#divflash").fadeOut(300); 
+			function snapshot() {
+				if (localMediaStream) {
+					ctx.drawImage(video, 0, 0, 1024, 768);
+					sacafoto(canvas.toDataURL('image/png'));
+				}
+			}
 
-        }
+			$('#divflash').hide();
+			$('#divNoCam').hide();
+			$('.btn-salir').click(() => win.close());
+			$('.btn-foto').click(snapshot);
+			$(document).keypress((e) => {
+				if(e.which == 32) snapshot(); /* Barra espaciadora */
+			});
+			$(document).keyup((e) => {
+				if(e.keyCode == 27) win.close(); /* Escape */
+			});
 
-        var errorCallback = function(e) {
-            $("#divNoCam").show(); 
-        };
+			const video = document.querySelector('video');
+			const canvas = document.querySelector('canvas');
+			const ctx = canvas.getContext('2d');
 
-        var video = document.querySelector('video');
-        var canvas = document.querySelector('canvas');
-        var ctx = canvas.getContext('2d');
-        var localMediaStream = null;
+			/* Cargar el video*/
+			navigator.webkitGetUserMedia({video: true}, function(stream) {
+				video.srcObject = stream;
+				localMediaStream = stream;
+			}, () => $('#divNoCam').show());
 
-        function snapshot() {
-            if (localMediaStream) {
-              ctx.drawImage(video, 0, 0, 1024, 768);          
-              sacafoto(canvas.toDataURL('image/png'));
-            }
-        }
-
-        video.addEventListener('click', snapshot, false);
-      
-          navigator.webkitGetUserMedia({video: true}, function(stream) {
-            video.src = window.URL.createObjectURL(stream);
-            localMediaStream = stream;
-        }, errorCallback);
-
-		// capturar teclado
-		$(document).ready(function(){
-		 
-			  $(document).keypress(function(e) {
-				    //32 es el codigo de espacio
-				    if(e.which == 32) {
-				        snapshot();}
-			  });         
-			  $(document).keyup(function(e) {
-				    //27 es el codigo de ESC
-				    if(e.keyCode == 27) {
-				         win.close();}
-			  });  
-		});
-
-      </script>
-
-  </body>
-  </html>
+			video.addEventListener('click', snapshot, false);
+		</script>
+	</body>
+</html>
